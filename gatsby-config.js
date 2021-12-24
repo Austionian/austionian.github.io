@@ -1,7 +1,6 @@
 module.exports = {
-  pathPrefix: "/new-personal-site",
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://r00ks.io",
     title: "austin rooks",
   },
   plugins: [
