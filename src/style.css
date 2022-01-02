@@ -84,10 +84,6 @@
     --color-icon-filter: invert(100%) brightness(200%);
   }
   
-  body.dark {
-    
-  }
-  
   body {
     color: var(--color-text);
     font-family: var(--font-body);
