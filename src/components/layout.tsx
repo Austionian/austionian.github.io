@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { StaticImage } from "gatsby-plugin-image"
 
 import { container } from './layout.module.css'
 import Navbar from './navbar/navbar'
+import Footer from './footer/footer'
 
 const Layout = ({ pageTitle, children }) => {
     const data = useStaticQuery(graphql`
@@ -22,6 +22,9 @@ const Layout = ({ pageTitle, children }) => {
       <main>
         {children}
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   )
 }

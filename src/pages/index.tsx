@@ -15,15 +15,12 @@ const IndexPage = (props: PageProps) => {
           width={200}
           height={200}
           quality={95}
-          alt="Profile picture"
+          alt="Profile picture--wearing a wetsuit from surfing in a lake."
         />
         <h1 className="main-heading">Hi, I'm Austin.</h1>
       </div>
       <div>
-        <p>I'm an experienced Software Engineer with a demonstrated history of working in full stack web development. Skilled in Python (Flask, Django), Typescript (React, Gatsby), CSS. Strong information technology professional with a Bachelor of Arts (BA) focused in English from University of Hawaii at Manoa.</p>
-      </div>
-      <div>
-        <p>Get in touch: <a href="mailto:austin@r00ks.io">austin@r00ks.io</a></p>
+        <p>I'm an experienced Software Engineer with a demonstrated history of working in full stack web development. Skilled in Python (Flask, Django), Typescript (React, Gatsby), CSS, and SQL (Postgres). Strong information technology professional with a Bachelor of Arts (BA) focused in English from University of Hawaii at Manoa.</p>
       </div>
     </Layout>
   )
