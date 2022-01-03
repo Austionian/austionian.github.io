@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
-import { container } from './layout.module.css'
 import Navbar from './navbar/navbar'
 import Footer from './footer/footer'
 
@@ -16,7 +15,7 @@ const Layout = ({ pageTitle, children }) => {
         }
     `)
   return (
-    <div className={container}>
+    <div className="global-wrapper">
       <title>{pageTitle} | {data.site.siteMetadata.title }</title>
       <Navbar />
       <main>
