@@ -1,7 +1,5 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPeace } from '@fortawesome/free-solid-svg-icons'
 
 import ThemeToggle from './toggle/toggle'
 
@@ -17,7 +15,7 @@ const Navbar = ({ location }) => {
                         <Link to="/apps" className="nav-link-text">Apps</Link>
                     </li>
                     <li className="nav-link-item">
-                        <Link to="https://blog.r00ks.io" className="nav-link-text">{'Blog >'}</Link>
+                        <Link to="https://blog.r00ks.io" className="nav-link-text">{'Blog ›'}</Link>
                     </li>
                 </ul>
                 <ul className="nav-links">
@@ -38,7 +36,7 @@ const Navbar = ({ location }) => {
                     <Link to="/apps" className="nav-link-text active">Apps</Link>
                 </li>
                 <li className="nav-link-item">
-                    <Link to="https://blog.r00ks.io" className="nav-link-text">{'Blog >'}</Link>
+                    <Link to="https://blog.r00ks.io" className="nav-link-text">{'Blog ›'}</Link>
                 </li>
             </ul>
             <ul className="nav-links">
