@@ -1,7 +1,16 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://r00ks.io`,
     title: `austin r00ks`,
+    author: {
+      name: `Austin Rooks`,
+    },
+    description: `A personal website.`,
+    siteUrl: `https://r00ks.io/`,
+    social: {
+      twitter: `austin_rooks`,
+      github: 'austionian',
+      email: 'austin@r00ks.io',
+    },
   },
   plugins: [
     {
@@ -12,6 +21,7 @@ module.exports = {
         }
       }
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-image`,
     {
