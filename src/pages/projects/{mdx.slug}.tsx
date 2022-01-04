@@ -4,6 +4,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
 import Layout from '../../components/layout'
 
+const Github = require('../../assets/github.svg');
+
 interface ProjectProps extends PageProps {
   data: {
     mdx: {
@@ -14,7 +16,8 @@ interface ProjectProps extends PageProps {
         hero_image_alt: string,
         hero_image_credit_link: string,
         hero_image_credit_text: string,
-        hero_image: ImageDataLike
+        hero_image: ImageDataLike,
+        repo: string
       }
     }
   }
@@ -24,7 +27,10 @@ const ProjectPost = ({ data }: ProjectProps) => {
   const image = getImage(data.mdx.frontmatter.hero_image)
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <h2>{data.mdx.frontmatter.title}</h2>
+      <div className='index-heading'>
+        <h2 className='project-heading'>{data.mdx.frontmatter.title}</h2>
+        <sub><a href={data.mdx.frontmatter.repo}><Github className='social-icon' /> Source Code</a></sub>
+      </div>
       <GatsbyImage
         image={image}
         alt={data.mdx.frontmatter.hero_image_alt}
@@ -38,19 +44,6 @@ const ProjectPost = ({ data }: ProjectProps) => {
       <MDXRenderer>
         {data.mdx.body}
       </MDXRenderer>
-      <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-            
-        </ul>
-      </nav>
     </Layout>
   )
 }
@@ -70,6 +63,7 @@ export const query = graphql`
             gatsbyImageData
           }
         }
+        repo
       }
     }
   }
