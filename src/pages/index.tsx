@@ -2,11 +2,14 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import { PageProps } from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faCodeBranch, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 const IndexPage = (props: PageProps) => {
   return (
     <Layout pageTitle="About">
-     <div>
+      <div className="index-container">
         <StaticImage
           className="bio-avatar"
           layout="fixed"
@@ -17,9 +20,28 @@ const IndexPage = (props: PageProps) => {
           quality={95}
           alt="Profile picture--wearing a wetsuit from surfing in a lake."
         />
-        <h1 className="main-heading">Hi, I'm Austin.</h1>
-      </div>
-      <div>
+        <h1 className="main-heading">Hi, I'm Austin</h1>
+        <h4 className="main-subheading">Software Engineer{" & "}Lake Michigan Surfer</h4>
+        <p>
+          <a href="/apps" className='button button-lg'>
+            <span className='icon'>
+              <FontAwesomeIcon icon={faCodeBranch} />
+            </span>
+            <span>Apps</span>
+          </a>
+          <a href="https://github.com/austionian" className='button button-lg'>
+            <span className='icon'>
+              <FontAwesomeIcon icon={faGithub} />
+            </span>
+            <span>Code</span>
+          </a>
+          <a href="mailto:austin@r00ks.io" className='button button-lg'>
+            <span className='icon'>
+              <FontAwesomeIcon icon={faPaperPlane} />
+            </span>
+            <span>Email</span>
+          </a>
+        </p>
         <p>I'm an experienced Software Engineer with a demonstrated history of working in full stack web development. Skilled in Python (Flask, Django), Typescript (React, Gatsby), CSS, and SQL (Postgres). Strong information technology professional with a Bachelor of Arts (BA) focused in English from University of Hawaii at Manoa.</p>
       </div>
     </Layout>

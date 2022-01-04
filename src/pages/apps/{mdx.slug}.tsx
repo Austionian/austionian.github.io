@@ -2,11 +2,12 @@ import * as React from 'react'
 import { graphql, PageProps } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+
 import Layout from '../../components/layout'
 
-const Github = require('../../assets/github.svg');
-
-interface ProjectProps extends PageProps {
+interface AppProps extends PageProps {
   data: {
     mdx: {
       body: string
@@ -23,13 +24,18 @@ interface ProjectProps extends PageProps {
   }
 }
 
-const ProjectPost = ({ data }: ProjectProps) => {
+const AppPost = ({ data }: AppProps) => {
   const image = getImage(data.mdx.frontmatter.hero_image)
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <div className='index-heading'>
         <h2 className='project-heading'>{data.mdx.frontmatter.title}</h2>
-        <sub><a href={data.mdx.frontmatter.repo}><Github className='social-icon' /> Source Code</a></sub>
+        <a href={data.mdx.frontmatter.repo}>
+        <span className='icon'>
+            <FontAwesomeIcon icon={faGithub} />
+        </span>
+        Source Code
+        </a>
       </div>
       <GatsbyImage
         image={image}
@@ -69,4 +75,4 @@ export const query = graphql`
   }
 `
 
-export default ProjectPost
+export default AppPost

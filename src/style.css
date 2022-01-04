@@ -75,9 +75,10 @@ html {
 }
 
 body {
-  --color-primary: #a64765;
+  --color-primary: #000;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
+  --color-text-dark: #f5f5f5;
   --color-heading: #1a202c;
   --color-heading-main: black;
   --color-accent: #d1dce5;
@@ -89,9 +90,10 @@ body.dark {
   --color-primary: #ff7aa2;
   --color-text: #c9d1d9;
   --color-text-light: #e3e3e3;
+  --color-text-dark: #292929;
   --color-heading: #e3e3e3;
   --color-heading-main: #e3e3e3;
-  --bg: #0d1117;
+  --bg: #0e1117;
   --color-icon-filter: invert(100%) brightness(200%);
 }
 
@@ -261,9 +263,24 @@ a:focus {
   margin-top: var(--spacing-6);
 }
 
+.main-container {
+  margin-top: var(--spacing-32)
+}
+
+.index-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .main-heading {
   font-size: var(--fontSize-7);
-  margin-bottom: var(--spacing-12);
+  margin-bottom: var(--spacing-0);
+  margin-top: var(--spacing-6)
+}
+
+.main-subheading {
+  margin-top: var(--spacing-2);
+  font-weight: var(--fontWeight-normal);
 }
 
 .article {
@@ -348,30 +365,74 @@ a:focus {
 .nav {
   display: flex;
   justify-content: space-between;
+  height: 55px;
+  box-shadow: 0 2px 0 0 var(--color-text-dark);
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
 }
 
 .nav-link-item {
-    padding-right: 2rem;
+  padding-right: 2rem;
 }
 
 .nav-link-text {
   font-family: var(--fontFamily-sans);
   color: var(--color-text);
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: calc(0.5rem - 1px);
+  min-height: 3.25rem;
 }
 
 .nav-link-text:hover {
-    font-weight: var(--fontWeight-black);
+  background-color: transparent;
+  border-bottom-color: var(--color-primary);
 }
   
 .active {
-  font-weight: var(--fontWeight-black);
+  font-weight: 900;
+  border-bottom: none;
+}
+
+.button {
+  background-color: var(--bg);
+  border-width: 1px;
+  cursor: pointer;
+  justify-content: center;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  height: 2.5rem;
+  line-height: 1.5;
+  position: relative;
+  vertical-align: top;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: var(--fontWeight-semibold);
+}
+
+.button:hover {
+  background-color: var(--color-text-dark);
+}
+
+.button-lg {
+  font-size: var(--fontSize-3);
+}
+
+.icon {
+  margin-left: calc(-0.5rem - 1px);
+  margin-right: 0.75rem;
+  
 }
 
 /* Media queries */

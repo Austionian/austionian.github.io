@@ -1,6 +1,8 @@
 import * as React from "react"
 import { useState, useEffect } from "react"
 import Toggle from 'react-toggle'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMoon } from '@fortawesome/free-solid-svg-icons'
 
 import { getTheme } from './theme'
 import useIsClient from "./useIsClient"

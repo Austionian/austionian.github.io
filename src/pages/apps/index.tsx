@@ -4,12 +4,12 @@ import Layout from '../../components/layout'
 
 const BlogPage = ({ data }) => {
   return (
-    <Layout pageTitle="Projects">
+    <Layout pageTitle="Apps">
       {
         data.allMdx.nodes.map(node => (
           <article key={node.id} className='post-list-item'>
             <h2>
-              <Link to={`/projects/${node.slug}`}>
+              <Link to={`/apps/${node.slug}`}>
                 # {node.frontmatter.title}
               </Link>
             </h2>

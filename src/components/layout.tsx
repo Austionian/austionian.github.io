@@ -18,7 +18,7 @@ const Layout = ({ pageTitle, children }) => {
     <div className="global-wrapper">
       <title>{pageTitle} | {data.site.siteMetadata.title }</title>
       <Navbar location={pageTitle}/>
-      <main>
+      <main className="main-container">
         {children}
       </main>
       <footer>

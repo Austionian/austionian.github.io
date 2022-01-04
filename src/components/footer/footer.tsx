@@ -1,30 +1,22 @@
 import * as React from 'react'
-
-const Email = require('../../assets/email.svg')
-const Github = require('../../assets/github.svg')
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faCopyright } from '@fortawesome/free-solid-svg-icons'
 
 const Footer = () => {
     return (
         <div>
-            <p>
-            Contact me here &nbsp;
-                <a href="mailto:austin@r00ks.io">
-                    <Email 
-                        className="social-icon"
-                        alt="email icon"
-                    />
-                </a>
-            </p>
-            <br />
             <div className='index-heading'>
                 <p>
                     <a href="https://github.com/Austionian/austionian.github.io">
-                        <Github className='social-icon' />
-                        {" "}Source Code
+                        <span className='icon'>
+                            <FontAwesomeIcon icon={faGithub} />
+                        </span>
+                        Source Code
                     </a>
                 </p>
                 <p>
-                    © {new Date().getFullYear()}
+                    <FontAwesomeIcon icon={faCopyright} /> {new Date().getFullYear()}
                 </p>
             </div>
         </div>
