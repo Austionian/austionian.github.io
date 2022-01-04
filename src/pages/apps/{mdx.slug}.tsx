@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import Layout from '../../components/layout'
+import Seo from '../../components/seo'
 
 interface AppProps extends PageProps {
   data: {
@@ -28,6 +29,7 @@ const AppPost = ({ data }: AppProps) => {
   const image = getImage(data.mdx.frontmatter.hero_image)
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
+      <Seo title={data.mdx.frontmatter.title} />
       <div className='index-heading'>
         <h2 className='project-heading'>{data.mdx.frontmatter.title}</h2>
         <a href={data.mdx.frontmatter.repo}>

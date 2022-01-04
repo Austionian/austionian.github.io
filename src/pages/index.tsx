@@ -1,14 +1,17 @@
 import * as React from 'react'
-import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import { PageProps } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faCodeBranch, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
+import Layout from '../components/layout'
+import Seo from '../components/seo'
+
 const IndexPage = (props: PageProps) => {
   return (
     <Layout pageTitle="About">
+      <Seo title="About" />
       <div className="index-container">
         <StaticImage
           className="bio-avatar"
