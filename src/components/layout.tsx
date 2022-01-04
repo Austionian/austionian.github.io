@@ -1,8 +1,12 @@
 import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import { config } from "@fortawesome/fontawesome-svg-core"
+import "@fortawesome/fontawesome-svg-core/styles.css"
 
 import Navbar from './navbar/navbar'
 import Footer from './footer/footer'
+
+config.autoAddCss = false
 
 const Layout = ({ pageTitle, children }) => {
     const data = useStaticQuery(graphql`
