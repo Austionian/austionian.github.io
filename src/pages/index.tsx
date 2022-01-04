@@ -5,7 +5,7 @@ import { PageProps } from 'gatsby'
 
 const IndexPage = (props: PageProps) => {
   return (
-    <Layout pageTitle="Home Page">
+    <Layout pageTitle="About">
      <div>
         <StaticImage
           className="bio-avatar"

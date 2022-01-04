@@ -17,7 +17,7 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <div className="global-wrapper">
       <title>{pageTitle} | {data.site.siteMetadata.title }</title>
-      <Navbar />
+      <Navbar location={pageTitle}/>
       <main>
         {children}
       </main>

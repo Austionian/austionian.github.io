@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://r00ks.io",
-    title: "austin r00ks",
+    siteUrl: `https://r00ks.io`,
+    title: `austin r00ks`,
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
           include: `${__dirname}/src/assets/`
@@ -13,26 +13,51 @@ module.exports = {
       }
     },
     `gatsby-plugin-typescript`,
-    "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
+    `gatsby-plugin-image`,
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-plugin-sharp`,
       options: {
-        name: `blog`,
-        path: `${__dirname}/blog`,
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        }
       }
     },
-    "gatsby-plugin-mdx",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sass",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        trackingId: "\u0016213171135",
+        name: `projects`,
+        path: `${__dirname}/projects`,
+      }
+    },
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+              backgroundColor: `transparent`,
+            },
+          },
+        ],
       },
     },
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

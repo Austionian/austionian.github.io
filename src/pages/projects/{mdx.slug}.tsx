@@ -4,7 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
 import Layout from '../../components/layout'
 
-interface BlogProps extends PageProps {
+interface ProjectProps extends PageProps {
   data: {
     mdx: {
       body: string
@@ -20,24 +20,37 @@ interface BlogProps extends PageProps {
   }
 }
 
-const BlogPost = ({ data }: BlogProps) => {
+const ProjectPost = ({ data }: ProjectProps) => {
   const image = getImage(data.mdx.frontmatter.hero_image)
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <p>{data.mdx.frontmatter.date}</p>
+      <h2>{data.mdx.frontmatter.title}</h2>
       <GatsbyImage
         image={image}
         alt={data.mdx.frontmatter.hero_image_alt}
       />
-      <p>
+      <sub>
         Photo Credit:{" "}
         <a href={data.mdx.frontmatter.hero_image_credit_link}>
           {data.mdx.frontmatter.hero_image_credit_text}
         </a>
-      </p>
+      </sub>
       <MDXRenderer>
         {data.mdx.body}
       </MDXRenderer>
+      <nav className="blog-post-nav">
+        <ul
+          style={{
+            display: `flex`,
+            flexWrap: `wrap`,
+            justifyContent: `space-between`,
+            listStyle: `none`,
+            padding: 0,
+          }}
+        >
+            
+        </ul>
+      </nav>
     </Layout>
   )
 }
@@ -62,4 +75,4 @@ export const query = graphql`
   }
 `
 
-export default BlogPost
+export default ProjectPost
