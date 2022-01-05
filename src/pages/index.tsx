@@ -25,7 +25,7 @@ const IndexPage = (props: PageProps) => {
         />
         <h1 className="main-heading">Hi, I'm Austin</h1>
         <h4 className="main-subheading">Software Engineer{" & "}Lake Michigan Surfer</h4>
-        <p>
+        <p className='main-buttons'>
           <a href="/apps" className='button button-lg'>
             <span className='icon'>
               <FontAwesomeIcon icon={faCodeBranch} />
