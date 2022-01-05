@@ -7,6 +7,7 @@ import { faCodeBranch, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 import Layout from '../components/layout'
 import Seo from '../components/seo'
+import WavingHand from '../components/handwave'
 
 const IndexPage = (props: PageProps) => {
   return (
@@ -23,7 +24,7 @@ const IndexPage = (props: PageProps) => {
           quality={95}
           alt="Profile picture--wearing a wetsuit from surfing in a lake."
         />
-        <h1 className="main-heading">Hi, I'm Austin</h1>
+        <h1 className="main-heading"><WavingHand />{` `}Hi, I'm Austin</h1>
         <h4 className="main-subheading">Software Engineer{" & "}Lake Michigan Surfer</h4>
         <p className='main-buttons'>
           <a href="/apps" className='button button-lg'>
