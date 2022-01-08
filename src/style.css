@@ -102,6 +102,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   background: var(--bg);
+  transition: background 0.2s ease-in, color 0.2s ease-in;
 }
 
 footer {
@@ -230,6 +231,7 @@ table thead tr th {
 
 a {
   color: var(--color-primary);
+  transition: color 0.2s ease-in;
 }
 
 a:hover,
@@ -275,12 +277,14 @@ a:focus {
 .main-heading {
   font-size: var(--fontSize-7);
   margin-bottom: var(--spacing-0);
-  margin-top: var(--spacing-6)
+  margin-top: var(--spacing-6);
+  transition: color 0.2s ease-in;
 }
 
 .main-subheading {
   margin-top: var(--spacing-2);
   font-weight: var(--fontWeight-normal);
+  transition: color 0.2s ease-in;
 }
 
 .article {
@@ -367,6 +371,7 @@ a:focus {
   justify-content: space-between;
   height: 55px;
   box-shadow: 0 2px 0 0 var(--color-text-dark);
+  transition: box-shadow 0.2s ease-in;
 }
 
 .nav-links {
@@ -419,6 +424,7 @@ a:focus {
   color: var(--color-text);
   text-decoration: none;
   font-weight: var(--fontWeight-semibold);
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
 }
 
 .button:hover {
